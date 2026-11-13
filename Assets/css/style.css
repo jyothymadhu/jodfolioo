@@ -1,0 +1,303 @@
+
+/* =================================
+   JODHA - HOME PAGE
+   Sea Green Theme
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #071715;
+    color: #F4FFFC;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 25px 8%;
+    position: relative;
+    z-index: 5;
+    background: #071715;
+    border-bottom: 1px solid rgba(72,214,181,0.12);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #48D6B5;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #A2B8B1;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #48D6B5;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: none;
+    color: #F4FFFC;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #48D6B5;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    color: #48D6B5;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #C0D9D1;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 15px;
+    color: #A2B8B1;
+    line-height: 1.9;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.hero-btn {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background: #48D6B5;
+    color: #071715;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 6px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #A5F3DC;
+    transform: translateY(-4px);
+}
+
+/* PROFILE IMAGE */
+
+.hero-image {
+    position: relative;
+
+    width: 380px;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.image-glow {
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    background: #48D6B5;
+    border-radius: 50%;
+
+    filter: blur(100px);
+    opacity: 0.2;
+}
+
+.hero-image img {
+    position: relative;
+
+    width: 320px;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 180px 180px 25px 25px;
+
+    border: 3px solid #48D6B5;
+
+    box-shadow: 0 0 35px rgba(72,214,181,0.15);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 350px;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 320px;
+    }
+
+    .image-glow {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 18px 6%;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: -6.8%;
+        left: -6.8%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 6% 20px;
+        background: #102923;
+        border-bottom: 1px solid rgba(72,214,181,0.18);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .hero {
+        padding: 25px 6% 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 300px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 270px;
+    }
+}

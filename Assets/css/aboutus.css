@@ -1,0 +1,453 @@
+
+/* =================================
+   JODHA - ABOUT PAGE
+   SEA GREEN THEME
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #071715;
+    color: #F4FFFC;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #071715;
+    border-bottom: 1px solid rgba(72,214,181,0.12);
+}
+
+.navbar {
+    width: 88%;
+    max-width: 1250px;
+    height: 85px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #48D6B5;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #A2B8B1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #48D6B5;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ABOUT HEADING */
+
+.about-hero {
+    padding: 90px 20px 65px;
+    text-align: center;
+
+    background:
+    radial-gradient(circle at 50% 20%,
+    rgba(72,214,181,0.13), transparent 55%);
+}
+
+.section-label {
+    color: #48D6B5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.about-heading h1 {
+    font-size: 55px;
+    margin: 12px 0;
+}
+
+.about-heading h1 span,
+.about-text h2 span,
+.section-title h2 span,
+.philosophy-content h2 span {
+    background: linear-gradient(90deg, #48D6B5, #A5F3DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: #A2B8B1;
+    font-size: 15px;
+}
+
+/* ABOUT CONTENT */
+
+.about-section {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 0 100px;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 85px;
+}
+
+/* PROFILE IMAGE */
+
+.about-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #48D6B5;
+    filter: blur(110px);
+    opacity: 0.2;
+}
+
+.image-frame {
+    position: relative;
+    width: 310px;
+    height: 410px;
+    padding: 5px;
+
+    background: linear-gradient(145deg,
+    #48D6B5, #187D75);
+
+    border-radius: 160px 160px 20px 20px;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 155px 155px 16px 16px;
+    display: block;
+}
+
+.image-tag {
+    position: absolute;
+    bottom: 15px;
+    right: -5px;
+
+    padding: 12px 18px;
+    background: #102923;
+
+    border: 1px solid rgba(72,214,181,0.2);
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+/* ABOUT TEXT */
+
+.small-heading {
+    color: #48D6B5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.about-text > p:not(.small-heading) {
+    color: #A2B8B1;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.9;
+}
+
+/* PERSONAL DETAILS */
+
+.about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.about-details div {
+    padding-left: 14px;
+    border-left: 2px solid #48D6B5;
+}
+
+.about-details span {
+    display: block;
+    color: #829D94;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.about-details h4 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* CV BUTTON */
+
+.about-btn {
+    display: inline-block;
+    padding: 13px 24px;
+
+    color: #071715;
+    font-size: 13px;
+    font-weight: bold;
+
+    border-radius: 6px;
+    background: linear-gradient(100deg,
+    #48D6B5, #A5F3DC);
+
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(72,214,181,0.2);
+}
+
+/* INTERESTS SECTION */
+
+.interests-section {
+    padding: 85px 6%;
+    background: #0D211E;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.interest-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.interest-card {
+    padding: 28px 22px;
+
+    background: #102923;
+    border: 1px solid rgba(72,214,181,0.12);
+
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-7px);
+    border-color: #48D6B5;
+    background: #15362E;
+}
+
+.interest-icon {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(72,214,181,0.12);
+    color: #48D6B5;
+
+    border-radius: 10px;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.interest-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.interest-card p {
+    font-size: 13px;
+    color: #A2B8B1;
+    line-height: 1.8;
+}
+
+/* PHILOSOPHY */
+
+.philosophy-section {
+    padding: 100px 20px;
+    text-align: center;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(72,214,181,0.12), transparent 65%);
+}
+
+.philosophy-content h2 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.philosophy-content > p:not(.section-label) {
+    max-width: 550px;
+    margin: auto;
+
+    color: #A2B8B1;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.philosophy-sign {
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #48D6B5;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid rgba(72,214,181,0.12);
+    padding: 22px;
+    text-align: center;
+    color: #829D94;
+    font-size: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+
+    .about-section {
+        gap: 45px;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        background: #102923;
+
+        flex-direction: column;
+        gap: 22px;
+
+        padding: 25px;
+        z-index: 100;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .about-heading h1 {
+        font-size: 42px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .image-frame {
+        width: 260px;
+        height: 350px;
+    }
+
+    .about-text h2 {
+        font-size: 29px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-content h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .about-heading h1 {
+        font-size: 36px;
+    }
+}
